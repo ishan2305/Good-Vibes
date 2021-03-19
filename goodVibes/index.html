@@ -17,8 +17,10 @@
             <button class="btn" id="general">#general</button>
             <button class="btn" id="gaming">#gaming</button>
             <button class="btn" id="music">#music</button>
-            <button class="btn" id="ninjas">#ninjas</button>
+            <button class="btn" id="shows">#shows</button>
         </div>
+
+        <div class="text-center whichroom"></div>
 
         <!-- chat list -->
 
@@ -60,7 +62,31 @@
 
 
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
 
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyD4biUNkf7dTyCWMEyBY9-R6zSRanLHx4U",
+        authDomain: "test-database-7da7b.firebaseapp.com",
+        projectId: "test-database-7da7b",
+        storageBucket: "test-database-7da7b.appspot.com",
+        messagingSenderId: "946499424449",
+        appId: "1:946499424449:web:6846c534113601b7000440",
+        measurementId: "G-4MKM3QBYM0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    </script>
     <script src="scripts/chat.js"></script>
     <script src="scripts/ui.js"></script>
     <script src="scripts/app.js"></script>
